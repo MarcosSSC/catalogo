@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<h1 class="title" align="center">Movies</h1>
+<br />
+<div class="content">
+    {% for movie in movies %}
+        <div class="movie" style="border:solid">
+            <h3>{{ movie.title}}</h3>
+            <br />
+            {{ movie.poster}}
+            <br />
+            <img src="{{ movie.description }}">
+        </div>
+        <br />
+    {% endfor %}
+</div>
+{% endblock %}
